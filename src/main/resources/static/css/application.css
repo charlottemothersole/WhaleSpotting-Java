@@ -27,7 +27,7 @@
 /* Footer */
 
 .footer-container {
-    background-color: rgba(27, 61, 175, 0.849);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     list-style: none;
