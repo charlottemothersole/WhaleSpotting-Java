@@ -9,10 +9,19 @@
     margin: 0;
 }
 
+.button {
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 175px;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
 }
 
 .navbar-icon {
@@ -27,7 +36,7 @@
 /* Footer */
 
 .footer-container {
-    background-color: transparent;
+    background-color: var(--darker-blue);
     display: flex;
     flex-direction: row;
     list-style: none;
