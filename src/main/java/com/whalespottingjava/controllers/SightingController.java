@@ -57,6 +57,7 @@ public class SightingController {
         Authentication authentication = securityContext.getAuthentication();
         MemberDetails memberDetails = (MemberDetails) authentication.getPrincipal();
         sighting.setMemberId(memberDetails.getMember().getId());
+        sighting.setApproved(false);
         sightingService.addSighting(sighting);
         return "add_sighting_confirmation";
     }
