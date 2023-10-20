@@ -98,6 +98,8 @@
     function openTab(evt, tab) {
         // Declare all variables
         var tabcontent, tablinks;
+        let tabElement = document.getElementById(tab);
+        let mediaMatch = window.matchMedia("(max-width: 640px)");
 
         // Get all elements with class="tabcontent" and hide them
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -112,10 +114,16 @@
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        if (document.getElementById(tab).id == "Preferences"){
-            document.getElementById(tab).style.display = "flex";
+        if (tabElement.id == "Preferences") {
+            tabElement.style.display = "flex";
+            
+            if (mediaMatch.matches) {
+                tabElement.style.flexDirection = "column";
+            } else {
+                tabElement.style.flexDirection = "row";
+            }
         } else {
-            document.getElementById(tab).style.display = "block";
+            tabElement.style.display = "block";
         }
         
 
