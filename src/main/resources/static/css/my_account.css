@@ -16,6 +16,10 @@
   height: 20px;
 }
 
+.password-input {
+    width: 90%;
+}
+
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
@@ -109,4 +113,11 @@ input:checked + .slider:before {
 .preference {
 display:flex;
 flex-direction:row;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        text-align: center;
+        font-size: 21px;
+    }
 }
