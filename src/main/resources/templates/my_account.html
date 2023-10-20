@@ -96,32 +96,39 @@
     </div>
 <script>
     function openTab(evt, tab) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+        // Declare all variables
+        var tabcontent, tablinks;
+        let tabElement = document.getElementById(tab);
+        let mediaMatch = window.matchMedia("(max-width: 640px)");
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  if(document.getElementById(tab).id == "Preferences"){
-  document.getElementById(tab).style.display = "flex";
-  }
-  else{
-  document.getElementById(tab).style.display = "block";
-  }
-  
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        if (tabElement.id == "Preferences") {
+            tabElement.style.display = "flex";
+            
+            if (mediaMatch.matches) {
+                tabElement.style.flexDirection = "column";
+            } else {
+                tabElement.style.flexDirection = "row";
+            }
+        } else {
+            tabElement.style.display = "block";
+        }
+        
 
-  evt.currentTarget.className += " active";
-}
+        evt.currentTarget.className += " active";
+    }
 </script>
 </body>
 </html>
