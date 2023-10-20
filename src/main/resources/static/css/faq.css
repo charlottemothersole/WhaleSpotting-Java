@@ -11,6 +11,19 @@ h1 {
   line-height: 1.5;
 }
 
+.content-container {
+    margin: 0px;
+}
+
+.waves {
+    opacity:0.5;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 details {
   width: 75%;
   min-height: 5px;
@@ -22,7 +35,8 @@ details {
   border: 1px solid var(--lightest-blue);
   border-radius: 15px;
   box-sizing: border-box;
-  transition: all 0.3s;
+  transition: all 0.3s;  background-color: white;
+
 }
 
 details + details {
