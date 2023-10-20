@@ -81,11 +81,11 @@
                 <form id="password" action="#" method="POST" th:action="@{/members/myaccount/change-password}" th:object="${password}">
                     <div class="detail">
                         <label for="oldPassword">Old password</label>
-                        <input required id="oldPassword" name="oldPassword" type="password">
+                        <input class="password-input" required id="oldPassword" name="oldPassword" type="password">
                     </div>
                     <div class="detail">
                         <label for="newPassword">New password</label>
-                        <input required id="newPassword" name="newPassword" type="password">
+                        <input class="password-input" required id="newPassword" name="newPassword" type="password">
                     </div>
                     <div class="detail">
                         <input type="submit" value="Change Password">

@@ -35,8 +35,8 @@ details {
   border: 1px solid var(--lightest-blue);
   border-radius: 15px;
   box-sizing: border-box;
-  transition: all 0.3s;  background-color: white;
-
+  transition: all 0.3s;
+  background-color: white;
 }
 
 details + details {
