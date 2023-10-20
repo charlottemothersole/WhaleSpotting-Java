@@ -31,6 +31,7 @@ public class Sighting {
 
     public Sighting() {}
 
+    //constructor only used for testing purpose as instance created by Spring in SightingController
     public Sighting(Date date, double latitude, double longitude) {
         this.date = date;
         this.latitude = latitude;

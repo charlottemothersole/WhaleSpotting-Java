@@ -30,13 +30,17 @@ form > input {
     border-radius: 5px;
 }
 
-.add-sighting-button-div { margin: 0.5rem 0 0.5rem auto;}
+.add-sighting-button-div {
+    display: flex;
+    justify-content: center;
+}
 
 #add-sighting-button {
     background-color: #064172;
     color:white;
     text-align: center;
 }
+
 .waves {
     opacity:0.5;
     position:fixed;
